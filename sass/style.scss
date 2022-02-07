@@ -1,0 +1,131 @@
+@use './variable' as *;
+@use './mixins' as *;
+@use './breakpoints' as *;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 13px;
+    @include font-size($laptop,$tablet,$mobile);
+}
+
+body{
+    min-height: 100vh;
+    background-color: $blue1;
+    @include flex(column,center,center);
+
+}
+
+main{
+    padding: 10rem;
+    @include main-pad($laptop,$tablet,$mobile);
+}
+
+.card{
+    @include flex(row,center,center);
+    @include card($laptop,$tablet,$mobile);
+    img{
+        @include img($laptop,$tablet,$mobile,$radius);
+        max-width: 35%;
+        height: auto;   
+        border-radius:  $radius 0px 0px $radius;     
+    }
+}
+
+
+.card-content{    
+    position: relative;
+    border-radius:0px  $radius $radius 0px;
+    padding: 3rem;
+    background-color:white;        
+    @include card-content($laptop,$tablet,$mobile,$radius);
+    
+    h1{
+       @include font(2rem,$blue4);
+       margin-right: 5rem;
+       @include margin($laptop,$tablet,$mobile);
+       @include h1($laptop,$tablet,$mobile);
+    }
+    p{
+        @include font(1rem,$blue3);
+        margin: 2rem 0rem;
+        margin-right: 3rem;
+        @include margin($laptop,$tablet,$mobile);
+        // @include p($laptop,$tablet,$mobile);
+    }
+    .card-footer{
+        @include flex(row,space-between,center);
+        .user-info{
+            @include flex(row,flex-start,center);
+            img{
+                max-width: 10%;
+                height: auto;
+                border-radius: 50%;
+                @include img-class($laptop,$tablet,$mobile);
+            }
+            
+            .content{
+                @include flex(column, center,flex-start);
+                padding: 1rem;
+                h1{
+                   @include font(1.5rem,$blue5);
+                  @include content-class($laptop,$tablet,$mobile);
+                }
+                h4{
+                   @include font(1rem,$blue2);
+                }
+            }
+        }
+        
+       .icon{
+           align-self: center;
+           background-color: $blue1;
+           border-radius: 50%;
+           padding: 1rem;  
+           transition: all 0.6s ease;     
+           z-index: 2; 
+           @include iconmargin($mobile)   ;
+       }
+    }
+}
+
+.menu{   
+    position: absolute;
+    @include flex(row,flex-start,flex-start);
+    @include menu($laptop,$tablet,$mobile);
+    padding: 1rem;    
+    background-color: $blue4;
+    transition:clip-path 0.6s ease;
+   li{
+    list-style: none;
+       &:nth-child(1){
+        @include font(1rem,$blue1);
+        letter-spacing: 0.5rem;
+       }
+   }
+  }
+
+// important segment
+.active{
+         @include active-prop($laptop,$tablet,$mobile);
+    svg{
+        path{
+            fill: white;
+        }
+    }
+}
+
+.hide{
+    display: none !important;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a{
+    color: hsl(228, 45%, 44%);
+    }
+}

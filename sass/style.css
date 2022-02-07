@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ecf2f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 10rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  main {
+    padding: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+}
+.card img {
+  max-width: 35%;
+  height: auto;
+  border-radius: 20px 0px 0px 20px;
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .card img {
+    max-width: 40%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card img {
+    max-width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card img {
+    max-width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+}
+
+.card-content {
+  position: relative;
+  border-radius: 0px 20px 20px 0px;
+  padding: 3rem;
+  background-color: white;
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .card-content {
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card-content {
+    padding: 3rem;
+    border-radius: 0px 0px 20px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content {
+    padding: 1rem;
+    border-radius: 0px 0px 20px 20px;
+  }
+}
+.card-content h1 {
+  font-size: 2rem;
+  font-family: "Manrope", sans-serif;
+  color: #48556a;
+  margin-right: 5rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card-content h1 {
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content h1 {
+    margin: 2rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card-content h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content h1 {
+    font-size: 1.5rem;
+  }
+}
+.card-content p {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  color: #6d7f97;
+  margin: 2rem 0rem;
+  margin-right: 3rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card-content p {
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content p {
+    margin: 2rem;
+  }
+}
+.card-content .card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-content .card-footer .user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-content .card-footer .user-info img {
+  max-width: 10%;
+  height: auto;
+  border-radius: 50%;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card-content .card-footer .user-info img {
+    max-width: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content .card-footer .user-info img {
+    max-width: 20%;
+  }
+}
+.card-content .card-footer .user-info .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.card-content .card-footer .user-info .content h1 {
+  font-size: 1.5rem;
+  font-family: "Manrope", sans-serif;
+  color: #181e26;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .card-content .card-footer .user-info .content h1 {
+    margin: 0px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-content .card-footer .user-info .content h1 {
+    margin: 0px;
+    font-size: 1.2rem;
+  }
+}
+.card-content .card-footer .user-info .content h4 {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  color: #9eafc2;
+}
+.card-content .card-footer .icon {
+  align-self: center;
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  padding: 1rem;
+  transition: all 0.6s ease;
+  z-index: 2;
+}
+@media screen and (max-width: 600px) {
+  .card-content .card-footer .icon {
+    margin: -8px 16px;
+  }
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #48556a;
+  transition: clip-path 0.6s ease;
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px), (min-width: 1300px) {
+  .menu {
+    bottom: 110px;
+    right: -56px;
+    width: 18rem;
+    height: 5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 61% 75%, 51% 100%, 38% 75%, 0% 75%);
+  }
+  .menu li {
+    margin: 0px auto;
+    cursor: pointer;
+  }
+  .menu li:nth-child(1) {
+    padding: 0rem 1rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .menu {
+    bottom: 0px;
+    left: 0px;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    padding: 3.5rem;
+  }
+  .menu li {
+    padding: 0px 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    bottom: 0px;
+    left: 0px;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    padding: 2rem;
+  }
+  .menu li {
+    padding: 0px 10px;
+  }
+}
+.menu li {
+  list-style: none;
+}
+.menu li:nth-child(1) {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  color: #ecf2f8;
+  letter-spacing: 0.5rem;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px), (min-width: 1300px) {
+  .active {
+    background-color: #48556a !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .active {
+    background-color: #6d7f97 !important;
+  }
+}
+.active svg path {
+  fill: white;
+}
+
+.hide {
+  display: none !important;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
